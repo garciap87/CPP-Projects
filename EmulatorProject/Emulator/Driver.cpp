@@ -9,7 +9,7 @@ int main(int argc, char* argv[])
 	}
 
 	// Set the Handler to capture control-c, shutdown, etc, events
-	if (SetConsoleCtrlHandler((PHANDLER_ROUTINE)SCUEmulator::CtrlHandler, TRUE))
+	if (SetConsoleCtrlHandler((PHANDLER_ROUTINE)Emulator::CtrlHandler, TRUE))
 	{
 		cout << ("The Control Handler is installed:\n");
 	}
@@ -38,6 +38,6 @@ int main(int argc, char* argv[])
 
 	emulator->setRunning(false);
 
-	delete scuEmulator;
+	delete emulator;
 	return 0;
 }
